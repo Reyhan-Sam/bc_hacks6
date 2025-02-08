@@ -1,22 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import React from 'react'
-import { getAuthorizationUrl } from './utils/fitbitAuth';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DebugPage from "./pages/DebugPage";
+import AuthCallback from "./AuthCallback";
+import { getAuthorizationUrl } from "./utils/fitbitAuth";  
 
-function App() {
+function Home() {
   const handleLogin = () => {
-    const authUrl = getAuthorizationUrl();
-    console.log("Redirecting to:", authUrl);  // Debugging: Check if URL is correct
-    window.location.href = authUrl;
+    window.location.href = getAuthorizationUrl();  
   };
 
   return (
-    <div>
+    <div style={{ textAlign: "center", marginTop: "20vh" }}>
       <h1>Fitness App</h1>
-      <button onClick={handleLogin}>Connect with Fitbit</button>
+      <button 
+        onClick={handleLogin} 
+        style={{ padding: "10px 20px", fontSize: "16px", cursor: "pointer" }}
+      >
+        Connect with Fitbit
+      </button>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth/callback" element={<AuthCallback />} />
+        <Route path="/debug" element={<DebugPage />} />
+      </Routes>
+    </Router>
   );
 }
 
