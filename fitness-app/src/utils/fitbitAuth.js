@@ -3,7 +3,7 @@ import { generateCodeVerifier, generateCodeChallenge } from './pkce';
 
 const CLIENT_ID = import.meta.env.VITE_FITBIT_CLIENT_ID;
 const REDIRECT_URI = import.meta.env.VITE_FITBIT_REDIRECT_URI;
-const SCOPES = 'activity heartrate sleep profile';
+const SCOPES = 'activity heartrate weight profile';
 
 export function getAuthorizationUrl() {
   const codeVerifier = generateCodeVerifier();

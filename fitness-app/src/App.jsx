@@ -34,4 +34,21 @@ function App() {
   );
 }
 
+function LogoutButton() {
+  const handleLogout = () => {
+    localStorage.removeItem("fitbit_access_token");
+    alert("Fitbit token cleared. Please reconnect.");
+    window.location.reload(); // Refresh to force re-login
+  };
+
+  return (
+    <button 
+      onClick={handleLogout} 
+      style={{ padding: "10px 20px", margin: "10px", cursor: "pointer" }}
+    >
+      Logout from Fitbit
+    </button>
+  );
+}
+
 export default App;
