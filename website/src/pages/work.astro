@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+
+const dayOrder = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+const projects = (await getCollection('work')).sort((a, b) => {
+
+    const indexA = dayOrder.indexOf(a.id);
+    const indexB = dayOrder.indexOf(b.id);
+	console.log(`${(-1*indexA) - indexB}`);
+    return (-1*indexA) - indexB;
+});
+---
+
+<BaseLayout
+	title="This Week's Plan"
+	description="daily plan"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="This Week's Plan"
+				tagline=""
+				align="start"
+			/>
+			<Grid variant="offset">
+				{
+					projects.map((project) => (
+						<li>
+							<PortfolioPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
