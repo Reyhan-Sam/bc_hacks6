@@ -1,0 +1,102 @@
+{
+  "age": 21,
+  "dailyCalBurn": 1500,
+  "dailyStepGoal": 2000,
+  "dietaryPreferences": {
+    "dairyFree": true,
+    "glutenFree": false,
+    "vegetarian": true
+  },
+  "fitbitAuthToken": "yourFitbitToken",
+  "fitbitData": {
+    "lastWeek": {
+      "Friday": {
+        "caloriesBurned": 600,
+        "steps": 12000,
+        "zoneTimeMins": 20
+      },
+      "Monday": {
+        "caloriesBurned": 500,
+        "steps": 10000,
+        "zoneTimeMins": 80
+      },
+      "Saturday": {
+        "caloriesBurned": 750,
+        "steps": 16000,
+        "zoneTimeMins": 5
+      },
+      "Sunday": {
+        "caloriesBurned": 300,
+        "steps": 6000,
+        "zoneTimeMins": 36
+      },
+      "Thursday": {
+        "caloriesBurned": 425,
+        "steps": 8500,
+        "zoneTimeMins": 10
+      },
+      "Tuesday": {
+        "caloriesBurned": 450,
+        "steps": 9000,
+        "zoneTimeMins": 15
+      },
+      "Wednesday": {
+        "caloriesBurned": 550,
+        "steps": 11000,
+        "zoneTimeMins": 60
+      }
+    },
+    "thisWeek": {
+      "Friday": {
+        "caloriesBurned": 550,
+        "steps": 11000,
+        "zoneTimeMins": 80
+      },
+      "Monday": {
+        "caloriesBurned": 600,
+        "steps": 12000,
+        "zoneTimeMins": 30
+      },
+      "Saturday": {
+        "caloriesBurned": 700,
+        "steps": 15000,
+        "zoneTimeMins": 50
+      },
+      "Sunday": {
+        "caloriesBurned": 350,
+        "steps": 7000,
+        "zoneTimeMins": 10
+      },
+      "Thursday": {
+        "caloriesBurned": 450,
+        "steps": 9000,
+        "zoneTimeMins": 30
+      },
+      "Tuesday": {
+        "caloriesBurned": 400,
+        "steps": 8000,
+        "zoneTimeMins": 80
+      },
+      "Wednesday": {
+        "caloriesBurned": 500,
+        "steps": 10000,
+        "zoneTimeMins": 60
+      }
+    }
+  },
+  "fitnessGoal": "Weight Loss",
+  "password": "hashedPassword",
+  "profilePicture": "",
+  "recommendations": {
+    "exercise": "Go for a run",
+    "mindfulness": "Meditate for 10 minutes",
+    "nutrition": "Eat more protein"
+  },
+  "username": "JohnDoe",
+  "workoutDays": [
+    "Monday",
+    "Wednesday",
+    "Friday"
+  ],
+  "workoutHour": "1"
+}
