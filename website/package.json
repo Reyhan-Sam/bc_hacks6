@@ -9,7 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.2.0",
     "astro": "^5.2.5",
-    "firebase": "^11.3.0"
+    "axios": "^1.7.9",
+    "crypto-js": "^4.2.0",
+    "firebase": "^11.3.0",
+    "react-router-dom": "^7.1.5"
   }
 }
