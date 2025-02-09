@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import pkg from 'react-router-dom';
-const {useNavigate} = pkg;
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function AuthCallback() {
@@ -25,8 +24,8 @@ function AuthCallback() {
     const codeVerifier = localStorage.getItem("pkce_code_verifier");
     if (codeVerifier) {
       const data = new URLSearchParams({
-        client_id: import.meta.env.VITE_FITBIT_CLIENT_ID,
-        grant_type: "authorization_code",
+        client_id: "23Q74W",
+        grant_type: "http://localhost:4321/auth/callback",
         redirect_uri: import.meta.env.VITE_FITBIT_REDIRECT_URI,
         code,
         code_verifier: codeVerifier,
@@ -39,7 +38,10 @@ function AuthCallback() {
           },
         })
         .then((response) => {
-          localStorage.setItem("fitbit_access_token", response.data.access_token);
+          localStorage.setItem(
+            "fitbit_access_token",
+            response.data.access_token
+          );
           navigate("/debug");
         })
         .catch((error) => {

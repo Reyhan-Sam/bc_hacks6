@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // React Components
-import ReactHome from '../components/react/App.jsx';
+import App from '../components/react/App.jsx';
 
 // Astro Components
 import CallToAction from '../components/CallToAction.astro';
@@ -48,7 +48,7 @@ const projects = (await getCollection('work'))
 			</header>
 
 			<!-- 🏋️ Add React-based Fitbit Login Here -->
-			<ReactHome client:only />
+			<App client:only />
 
 			<Skills />
 		</div>
