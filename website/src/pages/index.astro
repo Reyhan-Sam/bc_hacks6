@@ -7,11 +7,18 @@ import ContactCTA from '../components/ContactCTA.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
+
+import ReactHome from '../components/react/App.jsx';
 ---
 
 <BaseLayout
-	title="SignIn"
-	description="checks and sees w"
+  title="Sign In"
+  description="Connect your Fitbit account and track your health data."
 >
+  <Hero title="Connect with Fitbit" tagline="Track your fitness journey effortlessly." />
 
+  <!-- Render the React Fitbit authentication component inside Astro -->
+  <ReactHome client:load />
+
+  <ContactCTA />
 </BaseLayout>
